@@ -4,8 +4,7 @@
   "description": "Code4Huntsville Web Site",
   "main": "c4h.js",
   "dependencies": {
-    "g": "^1.0.0",
-    "mysql": "^2.0.0-rc2"
+    "g": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
