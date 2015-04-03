@@ -12,15 +12,13 @@ Our Open source prototype project is now on **Heroku**<br>
 
 We are specifically interested in attracting developers who would like to contribute in the following areas:
 
-* Programming APIs so this project can be part of custom software solutions
+* Being project leads and being a part of the Code4Huntsville leadership team
+* Coders interested in building civic applications using open data sources
+* Programming APIs and WEB Services for open data sources
 * CSS abstraction for allowing designers to create their own design and interfaces
 * Architects to help design modular components for building community Web Applications
 
 The general philosophy, though not in much in evidence currently, is to build (and refactor towards) "simple functions" that work together to provide a lot of functionality -  Watch this video! ["Simple Made Easy"] (http://www.infoq.com/presentations/Simple-Made-Easy)
-
-
-
-//Be sure to read [Hatchers-Vision in the git wiki] (https://github.com/RocketHatch/hatchersWeb/wiki/Hatchers-Vision).
 
 If you are interested in being a part of this project contact, Larry Mason @ larry.mason@code4huntsville.org or Chris Beaman @ Chris.beaman@code4huntsville.org.
  
