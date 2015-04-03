@@ -18,7 +18,7 @@ var handle = {};
 //var sessions = new Array();
 
 server.start(router.route, handle);
-console.log("host and port in config.json is: " + config.host + " : " + config.port);
+console.log("host and port in config.json is: " + config.host + " : " + process.env.PORT);
 console.log("Code4HSV is now up and running!");
 //setInterval(function(){session.purgeSessions()},(CHECKLISTMINUTES*60*1000));
 	
