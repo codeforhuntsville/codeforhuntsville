@@ -3,7 +3,7 @@ Code4Huntsville
 
 <h2>Building a 21st Century Government</h2>
 
-This project is for the web site "Code4Huntsville" development 
+This project is for the web site **Code4Huntsville** development effort
 
 Our Open source prototype project is now on **Heroku**<br>
 **[Code4Huntsville.org] (http://code4huntsville.org)**<p>
