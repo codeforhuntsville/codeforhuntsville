@@ -57,7 +57,7 @@
 		position: relative;
 		text-align: center;
 		width: 100%;
-	}
+	}	
 
 		#footer .icons {
 			margin: 0 0 1em 0;
@@ -74,6 +74,10 @@
 				margin-left: 0.75em;
 				padding-left: 0.75em;
 			}
+	#social-nav a {
+        display: inline-block;
+        float: none;
+	}
 
 /* Main */
 

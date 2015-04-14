@@ -9,3 +9,10 @@
 	body, input, select, textarea {
 		font-size: 12pt;
 	}
+	#main {
+	    margin-left: 40%;
+	}
+	#footer {
+        width: inherit;
+        margin-left: 1.5em;
+    }

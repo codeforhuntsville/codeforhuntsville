@@ -53,6 +53,10 @@
 	#footer {
 		padding: 2.25em 1.5em;
 	}
+	#social-nav a {
+        display: inline-block;
+        float: none;
+	}
 
 /* Main */
 
