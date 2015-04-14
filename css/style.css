@@ -996,8 +996,9 @@
 		left: 0;
 		padding: 0 4em 0 0;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		width: 35%;
+		text-decoration: none;
 	}
 
 		#footer .icons {
@@ -1015,6 +1016,7 @@
 			margin: 1em 0 1em 0;
 			padding: 0;
 			text-align: center;
+			display: inline-block;
 		}
 
 			#footer .copyright li {
@@ -1034,6 +1036,42 @@
 				#footer .copyright li a {
 					color: inherit;
 				}
+		#s1.join {
+		  font-size: large;
+          color: #fff !important;
+          font-weight: bold !important;
+		}		
+		#social-nav a {
+            width: 8em;
+            border-radius: 6px;
+            border-bottom: none;
+            background: #fff;
+            margin: 0 0.5em 0.5em;
+            padding: 0.4em 1em;
+            color: #fff;
+			text-align: center;
+            text-decoration: none;
+			display: block;
+			float: right;
+		}
+	    #social-nav a:hover {
+            opacity: .5;
+			color: #fff !important;
+		}
+		.spc{
+		    display: inherit;
+		    width: .5em;
+		}
+		#social-nav a.github {
+            background: #777;
+        }
+		#social-nav a.twitter {
+            background: #55acee;
+        }
+		#social-nav a.facebook {
+            background: #3b5998;
+		}
+}
 
 /* Main */
 
