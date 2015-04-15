@@ -39,7 +39,7 @@ postmark.send({
       console.error("Unable to send via postmark: " + error.message);
       return;
     } else {
-      console.info("Sent to postmark for delivery ");
+      console.info("Sent to postmark for delivery : sent OK");
     }	
   });
 
