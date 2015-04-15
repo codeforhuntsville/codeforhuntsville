@@ -24,20 +24,14 @@ console.log("Code4HSV is now up and running!");
 	
 
 /*//--- Test stuff ---------------------------------------*/
-//testData.getData();
+var client = new postmark.Client(process.env.POSTMARK_API_KEY);
 
-//console.log ('Get a session: ' + session.getSession().id);
-//console.log ('Get a session: ' + session.getSession().id);
-//console.log ('Get a session: ' + session.getSession().id);
-//var s = session.listSessions();
-//var sid = s[1].id;
-//console.log('the list: ' + s);
-//for (var i=0;i<s.length;i++) {
-//  console.log('In list: ' + s[i].id.com2);
-//}
-//session.deleteSession(null, 1);
-//var s = session.listSessions();
-//console.log ('Got a session: ' + s[1].id.com2 + ' : ' + session.getSession(sid).id.com2);
+client.sendEmail({
+    "From": "contacts@code4huntsville.org",
+    "To": "larry.mason@alltowntech.com",
+    "Subject": "Test from Postmark via heroku", 
+    "TextBody": "Hello from Postmark!"
+});
 
 //----------------------------------------------------------------------------------
 
