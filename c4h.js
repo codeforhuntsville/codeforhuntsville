@@ -1,6 +1,6 @@
 var server = require('server');
 var config = require('config.json');
-var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
+//var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 //var testData = require('odbcon');
 //var session = require('session');
 var router = require('router');
@@ -14,7 +14,7 @@ var handle = {};
   //handle['/login'] = requestHandlers.login;
   //handle['/logout'] = requestHandlers.logout;
   //handle['/register'] = requestHandlers.register;
-  //handle['/dbCall'] = requestHandlers.dbcall;
+  handle['/em'] = requestHandlers.send;
 
 //var sessions = new Array();
 
@@ -26,7 +26,7 @@ console.log("Code4HSV is now up and running!");
 
 /*//--- Test stuff ---------------------------------------*/
 //var client = new postmark.Client(process.env.POSTMARK_API_KEY);
-console.info("Going to try to send email " + process.env.POSTMARK_API_KEY);
+/*console.info("Going to try to send email " + process.env.POSTMARK_API_KEY);
 postmark.send({
     "From": "contacts@code4huntsville.org",
     "To": "larry.mason@alltowntech.com",
@@ -42,7 +42,7 @@ postmark.send({
       console.info("every thing verified : sent OK");
     }	
   });
-
+*/
 //----------------------------------------------------------------------------------
 
 

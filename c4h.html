@@ -17,6 +17,8 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/c4hAjax.js"></script>
+		<script src="js/c4hLoad.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -111,7 +113,8 @@
 						<p><a href="http://www.facebook.com/groups/Code4Huntsville">Join our Facebook group</a> to participate in discussions, hear about events, and connect with the community. Don't use Facebook? Get in touch with us by filling out the form below:</p>
 						<div class="row">
 							<div class="8u 12u$(small)">
-								<form method="post" action="mail.php">
+								<!--form method="post" action="mail.php"-->
+								<form>
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
@@ -119,7 +122,7 @@
 									</div>
 								</form>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input id="send"" type="submit" value="Send Message" /></li>
 								</ul>
 							</div>
 							<!--<div class="4u$ 12u$(small)">
