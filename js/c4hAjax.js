@@ -31,7 +31,7 @@ C4H.ajax.insertMemeber = function(data) {
 		
 	  }
       if (validationResp.message) {       
-        C4H.site.displayMessage(validationResp.message, true);
+        //C4H.site.displayMessage(validationResp.message, true);
       }     
     }
   });
@@ -49,7 +49,7 @@ C4H.ajax.updateMemeber = function(data) {
     success: function(validationResp) {
       //console.log("data received: " + validationResp.length + " at column: " + column);
       if (validationResp.message) {       
-        C4H.site.displayMessage(validationResp.message, true);
+        //C4H.site.displayMessage(validationResp.message, true);
       }
       changed = true;	  
     }
@@ -69,16 +69,17 @@ C4H.ajax.sendEmailMessage = function(data) {
     success: function(validationResp) {
       console.log("data received: " + validationResp['message']);  
 	  //C4H.site.clearEMessage();
-	  C4H.site.resetInputDialog();
+	  //C4H.site.resetInputDialog();
 	  if (validationResp.message) {
 	    console.log("data received 2: " + validationResp['message']);
 	    //C4H.site.displayMessage(validationResp.message, true);
+		C4H.ajax.parseData(validationResp);
 	  }	  
     },
 	error: function(validationResp) {
       console.log("error received: " + validationResp['message']);
-	  C4H.site.displayMessage("Message Not Sent", false);
-      C4H.site.clearEMessage();	  
+	  //C4H.site.displayMessage("Message Not Sent", false);
+      //C4H.site.clearEMessage();	  
       if (validationResp.message) {       
         C4H.ajax.parseData(validationResp);
 	  }     
@@ -98,6 +99,4 @@ C4H.ajax.parseData = function(jObj) {
   //}	
 };
     
-HPROG.ajax.prepMessageData = function() {
-};
 

@@ -1,10 +1,11 @@
 var server = require('server');
-var config = require('config.json');
 //var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 //var testData = require('odbcon');
 //var session = require('session');
 var router = require('router');
 var requestHandlers = require('requestHandlers');
+var testsend = require('sendNotification');
+var config = require('config.json');
 
 //var CHECKLISTMINUTES = 5;
 
@@ -25,24 +26,11 @@ console.log("Code4HSV is now up and running!");
 	
 
 /*//--- Test stuff ---------------------------------------*/
-//var client = new postmark.Client(process.env.POSTMARK_API_KEY);
-/*console.info("Going to try to send email " + process.env.POSTMARK_API_KEY);
-postmark.send({
-    "From": "contacts@code4huntsville.org",
-    "To": "larry.mason@alltowntech.com",
-	"Bcc": "lmason@HungryProgrammer.com",
-    "Subject": "Test from Postmark via Heroku",
-    "TextBody": "Hi Larry Mason",
-    "Tag": "What is this...?"
-  }, function(error, success) {
-    if(error) {
-      console.error("Unable to send via postmark: " + error.message);
-      return;
-    } else {
-      console.info("every thing verified : sent OK");
-    }	
-  });
-*/
+var to = config.emailReciever
+var subject = "Code4HSV on Heroku has fired up"
+var message = "Dyno startup"
+var response = null;
+testsend.send(to, subject, message, response);
 //----------------------------------------------------------------------------------
 
 
