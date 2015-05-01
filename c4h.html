@@ -41,6 +41,44 @@
 						<img src="images/facebook.gif" alt="Code4Huntsville Facebook group" class="fbgroup" />
 					</a>
 				</p-->
+				<p>
+				<div style="">
+					<form>
+						<h1 style="color:orange">Have an Idea?</h1>
+						<textarea style="color:black" id="Idea" name="Idea" placeholder="It'd be cool if ..." cols="30" rows="2" required="required"></textarea>
+						<!-- <p>*required</p>
+						<label>If you want follow-ups:</label>
+						<input id="Email" name="Email" 
+						type="text"  placeholder="Your Email"> -->
+						<br>
+						<input type="button" id="ButtonSubmit" value="Send Idea" onclick="postContactToGoogle()" />
+					</form>
+				</div>
+
+				 <script>
+				    function postContactToGoogle() {
+				        var idea = $('#Idea').val();
+				        var email = $('#Email').val();
+				        
+				            $.ajax({
+				                url: "https://docs.google.com/forms/d/1X24unZF2IvHZOiJZxR0jDDjUnCcnzgqQvl2i9nSPZnk/formResponse",
+				                // data: { "entry.1145937321": idea, 
+				                // "entry.1860093231": email },
+				                data: { "entry.1145937321": idea },
+				                type: "POST",
+				                dataType: "xml",
+				                statusCode: {
+				                    0: function () {
+				                        window.location.replace("ThankYou.html");
+				                    },
+				                    200: function () {
+				                        window.location.replace("ThankYou.html");
+				                    }
+				                }
+				            });
+					    }
+				</script>
+			</p>
 			</header>
             
 		<!-- Main -->
