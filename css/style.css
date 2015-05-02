@@ -1046,7 +1046,7 @@
             border-radius: 6px;
             border-bottom: none;
             background: #fff;
-            margin: 0 0.5em 0.5em;
+            margin: 0.5em;
             padding: 0.4em 1em;
             color: #fff;
 			text-align: center;
@@ -1060,7 +1060,7 @@
 		}
 		.spc{
 		    display: inherit;
-		    width: .5em;
+		    width: .1em;
 		}
 		#social-nav a.github {
             background: #777;
@@ -1093,6 +1093,144 @@
 				margin-top: 0;
 				padding-top: 0;
 			}
+			
+        .lpanel{
+          position: absolute;
+          display: block;
+          background: #ffffff;
+  /*font-size: 10pt;*/
+  /*border:1px solid #111111;
+  border-right: none;*/
+          border: none;
+          box-shadow: 10px 10px 37px #000;
+          width: 0;
+          height: auto;
+          padding: 30px 30px 30px 60px;
+          filter: alpha(opacity=95);
+          opacity: .95;
+          z-index: 25;
+        }
+
+
+		.lpanel.left {
+		  background: #000;
+		  width: 190px;
+		  height: 250px;
+		  top: 50px;
+		  left: -160px;
+		  -moz-border-radius-topright: 10px;
+		  -webkit-border-top-right-radius: 10px;
+		  -moz-border-radius-bottomright: 10px;
+		  -webkit-border-bottom-right-radius: 10px;
+
+		}
+
+		.lpanel.open{
+		  /*right: 0;*/
+		}
+		
+		.mitem:hover {
+		  cursor: pointer;
+		}
+		
+		#closed_txt {
+		  width:130px;
+          height:50px;
+		  position: relative;
+          top: 40px;
+          right: -65px;		  
+          -ms-transform:rotate(270deg); /* IE 9 */
+          -moz-transform:rotate(270deg); /* Firefox */
+          -webkit-transform:rotate(270deg); /* Safari and Chrome */
+          -o-transform:rotate(270deg); /* Opera */	
+          font-size: xx-large;		  
+		}
+
+		#lslidetrig {
+		  position: absolute;
+		  top: 50%;
+		  right: 5px;
+		  margin-top: -175px;
+		}
+
+		#openm1 {
+		  margin-top: 50px;
+		  display:block;
+		  font-size: xx-large;
+		  position: relative;
+          right: -5px;
+		}
+
+		#closem1 {
+		  margin-top: 50px;
+		  display:none;
+		  font-size: xx-large;
+		}
+
+		#exlinks {
+		  top-margin: 50px;
+		  margin-left: -25px; 
+		}
+
+		#exlinkshead {
+		  width: 100%;
+		  text-align: center;
+		  font-size: xx-large;
+		}
+
+		#lpelinks {
+		  /*vertical-align: middle;*/
+		}
+
+		.alink {
+		  width:250px;
+		  height: 20px;
+		}
+
+		#lpelinks a:link { 
+		  color: #433a3a; 
+		  text-decoration: none;
+		  font-weight: normal;  
+		}
+
+		#lpelinks a:hover, a:active { 
+		  text-decoration: none; 
+		  font-weight:bold;
+		}
+
+		#lpelinks a:visited {  
+		  color: #433a3a;
+		  font-weight: normal;
+		}
+
+
+		#popupMessage {
+		  position: absolute;
+		  top: 40%;
+		  left: 50%;
+		  margin-top:-50px;
+		  margin-left:-125px;
+		  display: block;
+		  background: #ffffff;
+		  text-align: center;
+		  /*font-size: 10pt;*/
+		  border:1px solid #111111;
+		  box-shadow: 10px 10px 37px #000;
+		  -moz-border-radius-topleft: 10px;
+		  -webkit-border-top-left-radius: 10px;
+		  -moz-border-radius-bottomleft: 10px;
+		  -webkit-border-bottom-left-radius: 10px;
+		  -moz-border-radius-topright: 10px;
+		  -webkit-border-top-right-radius: 10px;
+		  -moz-border-radius-bottomright: 10px;
+		  -webkit-border-bottom-right-radius: 10px;
+		  width: 175px;
+		  padding: 30px 30px 30px 30px;
+		  filter: alpha(opacity=95);
+		  opacity: .95;
+		  z-index: 225;
+		}
+
 
 /* Poptrox */
 	@-moz-keyframes spin { 0% { -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } 100% { -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
@@ -1305,3 +1443,4 @@
 	body.is-touch .poptrox-popup .closer {
 		opacity: 1.0 !important;
 	}
+	

@@ -1,5 +1,5 @@
 var server = require('server');
-//var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
+var postmark = require("postmark")(process.env.POSTMARK_API_KEY);
 //var testData = require('odbcon');
 //var session = require('session');
 var router = require('router');
@@ -20,7 +20,7 @@ var handle = {};
 //var sessions = new Array();
 
 server.start(router.route, handle);
-console.log("host and port in config.json is: " + config.host + " : " + process.env.PORT);
+console.log("host and port in config.json is: " + process.env.HOST + " : " + process.env.PORT);
 console.log("Code4HSV is now up and running!");
 //setInterval(function(){session.purgeSessions()},(CHECKLISTMINUTES*60*1000));
 	
@@ -28,7 +28,7 @@ console.log("Code4HSV is now up and running!");
 /*//--- Test stuff ---------------------------------------*/
 var to = config.emailReciever
 var subject = "Code4HSV on Heroku has fired up"
-var message = "Dyno startup"
+var message = "Dyno startup " + process.env.HOST
 var response = null;
 testsend.send(to, subject, message, response);
 //----------------------------------------------------------------------------------
