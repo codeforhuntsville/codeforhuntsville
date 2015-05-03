@@ -1,4 +1,3 @@
-C4H = {};
 C4H.ajax = {};
 
 C4H.ajax.initReqObj = function() {
@@ -58,6 +57,7 @@ C4H.ajax.updateMemeber = function(data) {
 };
 
 C4H.ajax.sendEmailMessage = function(data) {
+  console.log("Valid email address");
   var dataS = JSON.stringify({emess:data});
   var ret;
   console.log( "The data sent: " + dataS);
@@ -92,11 +92,7 @@ C4H.ajax.parseData = function(jObj) {
   Object.keys(jObj).forEach(function (key) {
     console.log("Key: " + key + " Value: " + jObj[key]);
   });
-  //if (Object.keys(jObj)[0] == 'skills') {
-  //  RCSData.skills = jObj['skills'];
-  //} else if (jObj['members']) {
-  //  RCSData.cMembers = jObj['members'];
-  //}	
+  C4H.site.displayMessage(jObj['message'] + "\nLook in mailbox for copy of message")	
 };
     
 

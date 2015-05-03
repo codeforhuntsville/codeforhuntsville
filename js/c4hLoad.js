@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   
   $("#send").click(function(){
@@ -5,8 +6,16 @@ $(document).ready(function(){
     console.log("the values are: " + $("#name").val() + "," + 
 	                              $("#email").val() + "," +
 								  $("#message").val());
-	C4H.ajax.sendEmailMessage(data);							  
+	if (validateEMail($("#email").val())) {							  
+	  C4H.ajax.sendEmailMessage(data);
+    } else {
+	  console.log("invalid email address");
+	  C4H.site.displayMessage("Error: You Must Enter Valid Email Address!")
+	}	  
     return false;
+  })
+  $("#popupMessage").click(function(){
+    C4H.site.displayMessage(null);  	  
   })
   $("#lslidetrig").click(function(){
       var closing = false;
@@ -23,8 +32,10 @@ $(document).ready(function(){
       //$("#linksPanel").toggle('slow').toggleClass("active").css("display","block");
       displayLinkPanel($('#openm1'),$('#closem1'),closing,$('#closed_txt'));      
       return false;
-  })  
-  
+  }) 
+  $("#closed_txt").click(function() {
+	  $("#lslidetrig").click();
+  })	   
 });
 
 displayLinkPanel = function(ido, idc, open, txt) {
@@ -37,5 +48,10 @@ displayLinkPanel = function(ido, idc, open, txt) {
     $(ido).css("display","block");
 	$('#closed_txt').show();
   }
+}
+
+validateEMail = function(expr) {
+  var pattern = /^[-!#$%&\'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&\'*+\/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$/
+  return pattern.test(expr);
 }
 

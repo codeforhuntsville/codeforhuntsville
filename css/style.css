@@ -1159,12 +1159,14 @@
 		  font-size: xx-large;
 		  position: relative;
           right: -5px;
+		  color: orange;
 		}
 
 		#closem1 {
 		  margin-top: 50px;
 		  display:none;
 		  font-size: xx-large;
+		  color: orange;
 		}
 
 		#exlinks {
@@ -1205,12 +1207,12 @@
 
 
 		#popupMessage {
-		  position: absolute;
+		  position: fixed;
 		  top: 40%;
 		  left: 50%;
 		  margin-top:-50px;
 		  margin-left:-125px;
-		  display: block;
+		  display: none;
 		  background: #ffffff;
 		  text-align: center;
 		  /*font-size: 10pt;*/
@@ -1224,12 +1226,23 @@
 		  -webkit-border-top-right-radius: 10px;
 		  -moz-border-radius-bottomright: 10px;
 		  -webkit-border-bottom-right-radius: 10px;
-		  width: 175px;
+		  width: 300px;
 		  padding: 30px 30px 30px 30px;
 		  filter: alpha(opacity=95);
 		  opacity: .95;
 		  z-index: 225;
 		}
+		
+		#glass {
+          visibility:hidden;
+            position:fixed;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            background-color:rgba(200,200,200,.4);
+            z-index:100;
+          }
 
 
 /* Poptrox */
