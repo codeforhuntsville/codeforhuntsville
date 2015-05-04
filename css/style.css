@@ -240,6 +240,7 @@
 		padding: 0 0.75em;
 		text-decoration: none;
 		width: 100%;
+		margin-top: 5px;
 	}
 
 		input[type="text"]:invalid,
