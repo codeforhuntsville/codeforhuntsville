@@ -42,9 +42,12 @@ $(document).ready(function(){
   }) 
   $("#closed_txt").click(function() {
 	  $("#lslidetrig").click();
-  })	   
+  })
+  $('.mlink').click(function() {
+      window.open($(this).attr('data'));    
+  })
 });
-
+    
 displayLinkPanel = function(ido, idc, open, txt) {
   if (!open) {
 	$('#closed_txt').hide();

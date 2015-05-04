@@ -988,7 +988,34 @@
           margin-bottom: 2em;
 		  margin-right: -27px;
 		}
+		
+		#mlinks {
+		  position: fixed;
+          top: 0;
+          background: #eee;
+          width: 100%;
+		  height: 35px;
+        }
+		
+		.mlink {
+		  width: 15%;
+          display: inline-block;
+		  font-weight: bold;
+		  float:right;
+		  position: fixed
+		}
+		
+		.mlink:hover {
+		  cursor: pointer;
+		}
+		
+		#data {
+		  right: 160px;
+		}
 
+		#slack {
+		  right: 0;
+		}
 
 /* Footer */
 
