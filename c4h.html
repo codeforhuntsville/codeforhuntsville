@@ -45,39 +45,16 @@
 				<div style="">
 					<form>
 						<h1 style="color:orange">Have an Idea?</h1>
-						<textarea style="color:black" id="Idea" name="Idea" placeholder="It'd be cool if ..." cols="30" rows="2" required="required"></textarea>
-						<!-- <p>*required</p>
-						<label>If you want follow-ups:</label>
-						<input id="Email" name="Email" 
-						type="text"  placeholder="Your Email"> -->
+						<textarea style="color:black" id="pg_idea" name="Idea" placeholder="It'd be cool if ..." cols="30" rows="2" required="required"></textarea>
+					    <!--p>*required</p>
+						<label>If you want follow-ups:</label-->
+						<input id="pg_email" name="Email" 
+						type="text"  placeholder="Your email if you want follow-up">
 						<br>
-						<input type="button" id="ButtonSubmit" value="Send Idea" onclick="postContactToGoogle()" />
+						<input type="button" id="gfButtonSubmit" value="Send Idea"/>
 					</form>
 				</div>
-
-				 <script>
-				    function postContactToGoogle() {
-				        var idea = $('#Idea').val();
-				        var email = $('#Email').val();
-				        
-				            $.ajax({
-				                url: "https://docs.google.com/forms/d/1X24unZF2IvHZOiJZxR0jDDjUnCcnzgqQvl2i9nSPZnk/formResponse",
-				                // data: { "entry.1145937321": idea, 
-				                // "entry.1860093231": email },
-				                data: { "entry.1145937321": idea },
-				                type: "POST",
-				                dataType: "xml",
-				                statusCode: {
-				                    0: function () {
-				                        window.location.replace("ThankYou.html");
-				                    },
-				                    200: function () {
-				                        window.location.replace("ThankYou.html");
-				                    }
-				                }
-				            });
-					    }
-				</script>
+				 
 			</p>
 			<div id="linksPanel_l" class="lpanel left closed">
 			  <div id="lslidetrig" class="closed">
@@ -196,9 +173,9 @@
 								<!--form method="post" action="mail.php"-->
 								<form>
 									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="s_name" placeholder="Name" /></div>
+										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="s_email" placeholder="Email" /></div>
+										<div class="12u$"><textarea name="message" id="s_message" placeholder="Message" rows="4"></textarea></div>
 									</div>
 								</form>
 								<ul class="actions">

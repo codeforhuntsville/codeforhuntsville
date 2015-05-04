@@ -56,6 +56,26 @@ C4H.ajax.updateMemeber = function(data) {
   return true;
 };
 
+C4H.ajax.postToGoogle = function(idea, email) {
+  $.ajax({
+	url: "https://docs.google.com/forms/d/1X24unZF2IvHZOiJZxR0jDDjUnCcnzgqQvl2i9nSPZnk/formResponse",
+    data: { "entry.1145937321": idea, "entry.1860093231": email },
+
+	type: "POST",
+	dataType: "xml",
+	statusCode: {
+		0: function () {
+			console.log("google form return status = 0");
+			C4H.site.displayMessage("Awesome, thanks for the idea");
+		},
+		200: function () {
+			console.log("google form return status = 200");
+			C4H.site.displayMessage("Awesome, thanks for the idea");
+		}
+	}
+  });
+};
+
 C4H.ajax.sendEmailMessage = function(data) {
   console.log("Valid email address");
   var dataS = JSON.stringify({emess:data});
@@ -92,7 +112,7 @@ C4H.ajax.parseData = function(jObj) {
   Object.keys(jObj).forEach(function (key) {
     console.log("Key: " + key + " Value: " + jObj[key]);
   });
-  C4H.site.displayMessage(jObj['message'] + "\nLook in mailbox for copy of message")	
+  C4H.site.displayMessage(jObj['message'] + "\nLook in mailbox for copy of message");	
 };
     
 

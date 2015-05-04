@@ -2,20 +2,27 @@
 $(document).ready(function(){
   
   $("#send").click(function(){
-    var data = {'name':$("#name").val(),'email':$("#email").val(),'message':$("#message").val()}
-    console.log("the values are: " + $("#name").val() + "," + 
-	                              $("#email").val() + "," +
-								  $("#message").val());
-	if (validateEMail($("#email").val())) {							  
+    var data = {'name':$("#s_name").val(),'email':$("#s_email").val(),'message':$("#s_message").val()}
+    console.log("the values are: " + $("#s_name").val() + "," + 
+	                              $("#s_email").val() + "," +
+								  $("#s_message").val());
+	if (validateEMail($("#s_email").val())) {							  
 	  C4H.ajax.sendEmailMessage(data);
     } else {
 	  console.log("invalid email address");
-	  C4H.site.displayMessage("Error: You Must Enter Valid Email Address!")
+	  C4H.site.displayMessage("Come on now, at least enter a valid email address!");
 	}	  
     return false;
   })
+  $("#gfButtonSubmit").click(function() {
+	if ($('#pg_idea').val()) {
+      C4H.ajax.postToGoogle($('#pg_idea').val(), $('#pg_email').val());	
+    } else {
+	  C4H.site.displayMessage("Well to have to have some idea!");
+	}	  
+  })
   $("#popupMessage").click(function(){
-    C4H.site.displayMessage(null);  	  
+    C4H.site.displayMessage(null);   	
   })
   $("#lslidetrig").click(function(){
       var closing = false;
