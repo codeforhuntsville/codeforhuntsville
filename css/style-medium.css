@@ -41,6 +41,10 @@
 			#header h1 br {
 				display: inline;
 			}
+			
+		#mlinks {
+		  height: 0;
+		}
 
 /* Footer */
 
