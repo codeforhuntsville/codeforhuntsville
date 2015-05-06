@@ -1003,7 +1003,9 @@
           display: inline-block;
 		  font-weight: bold;
 		  float:right;
-		  position: fixed
+		  position: fixed;
+		  font-size: initial;
+		  visibility: visible;
 		}
 		
 		.mlink:hover {
@@ -1011,11 +1013,27 @@
 		}
 		
 		#data {
+		  display: inline-block;
+		  visibility: visible;
 		  right: 160px;
+		  top: 0;
 		}
 
 		#slack {
+		  display: inline-block;
+		  visibility: visible;
 		  right: 0;
+		  top: 0;
+		}
+		
+		#menu {
+		  border: 1px;
+          box-shadow: 10px 10px 37px #000;
+		  visibility: hidden;
+		}
+		
+		#menuicon {
+		  visibility: hidden;
 		}
 
 /* Footer */
@@ -1163,8 +1181,8 @@
 		}
 		
 		#closed_txt {
-		  width:130px;
-          height:50px;
+		  width: 84px;
+          height: 0px;
 		  position: relative;
           top: 40px;
           right: -65px;		  
@@ -1172,7 +1190,7 @@
           -moz-transform:rotate(270deg); /* Firefox */
           -webkit-transform:rotate(270deg); /* Safari and Chrome */
           -o-transform:rotate(270deg); /* Opera */	
-          font-size: xx-large;		  
+          font-size: x-large;		  
 		}
 
 		#lslidetrig {

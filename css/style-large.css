@@ -22,6 +22,10 @@
 			#header h1 br {
 				display: none;
 			}
+		.mlink {
+		  display: inline-block;
+		  visibility: visible;
+		}
 
 /* Footer */
 

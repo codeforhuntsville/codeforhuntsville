@@ -1,6 +1,13 @@
 
 $(document).ready(function(){
-  
+ resetPage();
+ $("#menuicon").click(function() {
+	if ($("#menu").css("visibility") === 'hidden') {
+	  $("#menu").add(".mlink").css("visibility","visible");
+    } else {
+	  $("#menu").add(".mlink").css("visibility","hidden");	
+	}	  
+  })  
   $("#send").click(function(){
     var data = {'name':$("#s_name").val(),'email':$("#s_email").val(),'message':$("#s_message").val()}
     console.log("the values are: " + $("#s_name").val() + "," + 
@@ -44,10 +51,27 @@ $(document).ready(function(){
 	  $("#lslidetrig").click();
   })
   $('.mlink').click(function() {
-      window.open($(this).attr('data'));    
+      window.open($(this).attr('data'));
+	  console.log("Menuicon is displayed: " + $("#menuicon").css("display"));
+      if ($(window).width() > 980) {
+	    $(".mlink").css("visibility","visible");  
+	  }	else {
+		$("#menu").add(".mlink").css("visibility","hidden");
+	  }  
+  })
+  $(window).resize(function() {
+      resetPage();
   })
 });
-    
+
+function resetPage() {
+    if ($(window).width() > 980) {
+	  $(".mlink").css("visibility","visible");  
+	} else {
+	  $("#menu").add(".mlink").css("visibility","hidden");
+	} 
+}
+      
 displayLinkPanel = function(ido, idc, open, txt) {
   if (!open) {
 	$('#closed_txt').hide();

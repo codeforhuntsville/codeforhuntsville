@@ -31,11 +31,13 @@
 	}
 	
 	    #header .logo {
-		    margin: auto;
+		  position: relative;
+          top: 10px;
+		  margin: auto;
 		}
 
 		#header h1 {
-			font-size: 1.75em;
+		  font-size: 1.75em;
 		}
 
 			#header h1 br {
@@ -43,8 +45,48 @@
 			}
 			
 		#mlinks {
-		  height: 0;
+		  background: #000;
+		  height: 35px;
+		  margin-left: -64px;
 		}
+				
+		#menuicon {
+          width: 25px;
+          height: 25px;
+		  background: url('../images/menuicon.png');
+		  position: fixed;
+          right: 10px;
+		  top: 5px;
+		  visibility: visible;
+		}
+		
+		#menu {
+		  background: #fff;
+		  height: 70px;
+		  width: 150px;
+		  position: fixed;
+		  top: 35px;
+		  right: 5px;
+		  visibility: hidden;
+		}
+		
+		.mlink {
+		  font-size: small;
+		  width: 145px;
+		  right: 0;
+		  visibility: visible;
+		}
+		
+		#data {
+		  right: 0;
+		  top: 45px;
+		}
+
+		#slack {
+		  right: 0;
+		  top: 65px;
+		}
+		
 
 /* Footer */
 
