@@ -25,6 +25,7 @@
 		.mlink {
 		  display: inline-block;
 		  visibility: visible;
+		  margin-left: -47px;
 		}
 
 /* Footer */
