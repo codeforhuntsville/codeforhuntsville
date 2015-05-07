@@ -66,9 +66,11 @@ $(document).ready(function(){
 
 function resetPage() {
     if ($(window).width() > 980) {
-	  $(".mlink").css("visibility","visible");  
+	  $(".mlink").css("visibility","visible");
+      $(".header").css("z-index", "25");	  
 	} else {
 	  $("#menu").add(".mlink").css("visibility","hidden");
+	   $(".header").css("z-index", "0");
 	} 
 }
       

@@ -28,6 +28,7 @@
 		text-align: center;
 		top: auto;
 		width: 100%;
+		z-index: 0;
 	}
 	
 	    #header .logo {

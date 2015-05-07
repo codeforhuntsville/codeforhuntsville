@@ -9,6 +9,7 @@
 	#header {
 		padding: 1em 3em 3em 3em;
 		width: 30%;
+		z-index: 25;
 	}
 
 	    #header .logo {
