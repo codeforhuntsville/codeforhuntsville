@@ -8,6 +8,9 @@
 	body, input, select, textarea {
 		font-size: 12pt;
 	}
+	#header {
+	  z-index: 25;
+	}
 	#main {
 	  margin-left: 40%;
       margin-top: 150px;
