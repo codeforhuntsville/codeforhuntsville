@@ -25,7 +25,7 @@ $(document).ready(function(){
 	if ($('#pg_idea').val()) {
       C4H.ajax.postToGoogle($('#pg_idea').val(), $('#pg_email').val());	
     } else {
-	  C4H.site.displayMessage("Well to have to have some idea!");
+	  C4H.site.displayMessage("Well you have to have some idea!");
 	}	  
   })
   $("#popupMessage").click(function(){
