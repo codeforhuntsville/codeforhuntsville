@@ -26,11 +26,11 @@ console.log("Code4HSV is now up and running!");
 	
 
 /*//--- Test stuff ---------------------------------------*/
-var to = config.emailReciever
-var subject = "Code4HSV on Heroku has fired up"
-var message = "Dyno startup " + process.env.HOST
-var response = null;
-testsend.send(to, subject, message, response);
+//var to = config.emailReciever
+//var subject = "Code4HSV on Heroku has fired up"
+//var message = "Dyno startup " + process.env.HOST
+//var response = null;
+//testsend.send(to, subject, message, response);
 //----------------------------------------------------------------------------------
 
 
